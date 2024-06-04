@@ -1,9 +1,9 @@
 package user
 
 type User struct {
-	id    int
-	email string
-	// googleCalendarKey string
+	id                int
+	email             string
+	googleCalendarKey string
 	// alt calendars ...
 
 	// this could be a TZ object with a string representation possibly
