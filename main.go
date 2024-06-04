@@ -28,7 +28,6 @@ func main() {
 	if err != nil {
 		log.Fatal("Error connecting to postgres")
 	}
-	// close on exit
 	defer DB.Close()
 
 	router := mux.NewRouter()
