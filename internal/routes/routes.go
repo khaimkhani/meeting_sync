@@ -7,7 +7,9 @@ import (
 )
 
 func RegisterRoutes(r *mux.Router) {
+	// TODO some routes need to consider scope
+	// either register subroutes and use perm middleware or
+	// handle in handler with a helper funC
 	r.HandleFunc("/hello-world", handlers.PrimHandler)
-	// TODO some routes need to allow not logged in users
 	r.Use(middleware.AuthMiddleware)
 }
