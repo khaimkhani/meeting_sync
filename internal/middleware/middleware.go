@@ -17,3 +17,9 @@ func AuthMiddleware(next http.Handler) http.Handler {
 		}
 	})
 }
+
+// TODO
+// Rate limiter
+// Logging Middleware
+// Error middleware
+// metrics

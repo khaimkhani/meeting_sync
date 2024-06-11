@@ -26,7 +26,7 @@ func main() {
 	// init db
 	DB, err := sql.Open("postgres", getDBUrl())
 	if err != nil {
-		log.Fatal("Error connecting to postgres")
+		log.Fatal(err)
 	}
 	defer DB.Close()
 
@@ -34,6 +34,6 @@ func main() {
 
 	routes.RegisterRoutes(router)
 
-	http.ListenAndServe(":5000", router)
+	log.Fatal(http.ListenAndServe(":5000", router))
 
 }
